@@ -1,5 +1,8 @@
-asgiref==3.2.7
 Django==3.0.5
+asgiref==3.2.7
+django-redis==4.11.0
+djangorestframework==3.11.0
 mysqlclient==1.4.6
 pytz==2019.3
+redis==3.4.1
 sqlparse==0.3.1
