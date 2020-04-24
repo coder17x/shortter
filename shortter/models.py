@@ -14,3 +14,13 @@ class Links(models.Model):
         sh_link = self.lnk_short_name
         fl_link = self.lnk_full_name[:30]
         return "{sh_link} - [{fl_link}...]".format(sh_link=sh_link, fl_link=fl_link)
+
+    def __unicode__(self):
+        return self.__str__().encode('utf-8')
+
+    def to_json(self):
+        return {
+            'id': self.lnk_id,
+            'short_name': self.lnk_short_name,
+            'full_name': self.lnk_full_name
+        }
